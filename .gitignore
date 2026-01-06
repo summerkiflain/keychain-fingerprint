@@ -1,0 +1,10 @@
+# Compiled binary
+keychain-fingerprint
+
+# macOS
+.DS_Store
+
+# Xcode
+*.xcodeproj
+*.xcworkspace
+DerivedData/
