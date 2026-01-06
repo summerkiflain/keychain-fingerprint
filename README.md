@@ -1,32 +1,30 @@
 # keychain-fingerprint
 
-Touch ID 인증으로 macOS Keychain 비밀번호에 안전하고 편리하게 접근하는 CLI 도구
+A CLI tool for secure and convenient macOS Keychain access using Touch ID authentication.
+
+📖 **Blog post**: [Secure and Convenient Keychain Access with Touch ID](https://dss99911.github.io/tools/mac/2026/01/06/keychain-fingerprint.html)
 
 ## Why?
 
-macOS Keychain에 저장된 비밀번호에 접근할 때 두 가지 불편함이 있습니다:
+When accessing passwords stored in macOS Keychain, you face a security vs convenience dilemma:
 
-### 문제 1: 보안 vs 편의성 딜레마
+### The Problem
 
-`security find-generic-password` 명령어로 비밀번호에 접근하면:
+Running `security find-generic-password` shows this dialog:
 
 ```
-"security"가 키체인의 "myapp"에 저장된 기밀 정보를 사용하려고 합니다.
-[거부] [허용] [항상 허용]
+"security" wants to use your confidential information stored in "myapp" in your keychain.
+[Deny] [Allow] [Always Allow]
 ```
 
-- **"허용"**: 매번 Mac 비밀번호를 입력해야 함 → 번거로움
-- **"항상 허용"**: 이후 어떤 앱에서든 비밀번호 없이 접근 가능 → 보안 취약
+- **"Allow"**: Requires typing Mac password every time → Inconvenient
+- **"Always Allow"**: Any app can access without authentication → Insecure
 
-### 문제 2: 비밀번호 입력의 불편함
+### The Solution: Touch ID
 
-Mac 비밀번호는 보통 길고 복잡해서 매번 입력하기 번거롭습니다.
-
-### 해결책: Touch ID
-
-이 도구는 **Touch ID**로 인증하여:
-- **빠르고 편리함**: 손가락 한 번으로 인증 (비밀번호 입력 불필요)
-- **보안 유지**: 다른 앱에서 접근 시 여전히 Mac 비밀번호 필요
+This tool uses **Touch ID** for authentication:
+- **Fast and convenient**: One touch to authenticate (no password typing)
+- **Secure**: Other apps still require Mac password to access
 
 ## Installation
 
